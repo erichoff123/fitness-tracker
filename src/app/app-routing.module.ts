@@ -1,11 +1,10 @@
-// src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'list', // JDavis: changing from 'home' to 'list'.
+    redirectTo: 'list',
     pathMatch: 'full'
   },
   {
@@ -20,7 +19,9 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'workouts', loadChildren: './workouts/workouts.module#WorkoutsPageModule' },
   { path: 'timer', loadChildren: './timer/timer.module#TimerPageModule' },
-  { path: 'plans', loadChildren: './plans/plans.module#PlansPageModule' }
+  { path: 'plans', loadChildren: './plans/plans.module#PlansPageModule' },
+  { path: 'workout-new', loadChildren: './workout-new/workout-new.module#WorkoutNewPageModule' },
+  { path: 'workout-detail', loadChildren: './workout-detail/workout-detail.module#WorkoutDetailPageModule' }
 ];
 
 @NgModule({
